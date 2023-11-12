@@ -17,6 +17,7 @@ def main():
     clock = pyg.time.Clock()
 
     grid = Grid(10, 50, types)
+    step=True
 
     # MAIN LOOP
     run = True
@@ -28,14 +29,17 @@ def main():
             elif event.type == pyg.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     grid = Grid(10, 50, types)
+                if event.button == 3:
+                    step=True
 
         SCREEN.fill(BG_COLOR)
 
-        if not grid.check_full_collapse():
+        if not grid.check_full_collapse() and step:
             i = grid.get_min_entropy()
             grid.tiles[i].collapse()
             grid.propagate(i)
             grid.n_collapsed += 1
+            step = False
         grid.draw(SCREEN)
 
         clock.tick(60)

@@ -1,36 +1,52 @@
 {
     "grass": {
         "top": [
-            "grass",
-            "stone"
+            "grass"
         ],
         "bottom": [
+            "grass",
             "stone"
         ],
         "left": [
-            "grass",
-            "stone"
+            "grass"
         ],
         "right": [
-            "stone"
+            "grass"
         ]
     },
     "stone": {
         "top": [
-            "grass",
-            "stone"
+            "grass"
         ],
         "bottom": [
-            "grass",
-            "stone"
+            "stone",
+            "granite"
         ],
         "left": [
-            "grass",
-            "stone"
+            "stone",
+            "granite"
         ],
         "right": [
-            "grass",
-            "stone"
+            "stone",
+            "granite"
+        ]
+    },
+    "granite": {
+        "top": [
+            "stone",
+            "granite"
+        ],
+        "bottom": [
+            "stone",
+            "granite"
+        ],
+        "left": [
+            "stone",
+            "granite"
+        ],
+        "right": [
+            "stone",
+            "granite"
         ]
     }
 }
