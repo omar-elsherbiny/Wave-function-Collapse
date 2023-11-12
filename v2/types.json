@@ -1,0 +1,35 @@
+{
+    "grass": {
+        "top": [
+            "grass"
+        ],
+        "bottom": [
+            "grass",
+            "stone"
+        ],
+        "left": [
+            "grass"
+        ],
+        "right": [
+            "grass"
+        ]
+    },
+    "stone": {
+        "top": [
+            "grass",
+            "stone"
+        ],
+        "bottom": [
+            "grass",
+            "stone"
+        ],
+        "left": [
+            "grass",
+            "stone"
+        ],
+        "right": [
+            "grass",
+            "stone"
+        ]
+    }
+}
