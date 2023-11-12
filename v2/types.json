@@ -1,17 +1,18 @@
 {
     "grass": {
         "top": [
-            "grass"
-        ],
-        "bottom": [
             "grass",
             "stone"
         ],
+        "bottom": [
+            "stone"
+        ],
         "left": [
-            "grass"
+            "grass",
+            "stone"
         ],
         "right": [
-            "grass"
+            "stone"
         ]
     },
     "stone": {
