@@ -1,6 +1,6 @@
 import pygame as pyg
 import json
-from random import choice
+from random import choice, randint
 
 f = open('types.json', 'r')
 types = json.load(f)
@@ -40,12 +40,18 @@ class Tile:
 
 
 class Grid:
-    def __init__(self, grid_size, tile_size, types):
+    def __init__(self, grid_size, tile_size, types, n_nodes=1):
         self.gs = grid_size
         self.ts = tile_size
         self.n_collapsed = 0
         self.tiles = [Tile(i, j, list(types.keys()), tile_size)
                       for i in range(grid_size) for j in range(grid_size)]
+        for i in range(n_nodes):
+            ind=randint(0,grid_size**2-1)
+            self.tiles[ind].collapse()
+            self.propagate(ind)
+            self.n_collapsed += 1
+            
         self.default_tile = format_img('assets/glass.png', tile_size)
 
     def _index2coords(self, index):

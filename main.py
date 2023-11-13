@@ -16,7 +16,7 @@ FONT = pyg.font.Font("freesansbold.ttf", 20)
 def main():
     clock = pyg.time.Clock()
 
-    grid = Grid(10, 50, types)
+    grid = Grid(10, 50, types, n_nodes=3)
     step=True
 
     # MAIN LOOP
@@ -28,7 +28,7 @@ def main():
                 syexit()
             elif event.type == pyg.MOUSEBUTTONDOWN:
                 if event.button == 1:
-                    grid = Grid(10, 50, types)
+                    grid = Grid(10, 50, types, n_nodes=3)
                 if event.button == 3:
                     step=True
 
