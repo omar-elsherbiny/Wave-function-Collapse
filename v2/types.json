@@ -1,22 +1,48 @@
 {
     "grass": {
         "top": [
-            "grass"
+            "grass",
+            "dirt"
         ],
         "bottom": [
             "grass",
-            "stone"
+            "dirt"
         ],
         "left": [
+            "grass",
+            "dirt"
+        ],
+        "right": [
+            "grass",
+            "dirt"
+        ]
+    },
+    "dirt": {
+        "top": [
+            "dirt",
+            "stone",
+            "grass"
+        ],
+        "bottom": [
+            "dirt",
+            "stone",
+            "grass"
+        ],
+        "left": [
+            "dirt",
+            "stone",
             "grass"
         ],
         "right": [
+            "dirt",
+            "stone",
             "grass"
         ]
     },
     "stone": {
         "top": [
-            "grass"
+            "stone",
+            "granite"
         ],
         "bottom": [
             "stone",

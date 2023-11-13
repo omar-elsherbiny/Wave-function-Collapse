@@ -36,10 +36,11 @@ def main():
 
         if not grid.check_full_collapse() and step:
             i = grid.get_min_entropy()
-            grid.tiles[i].collapse()
-            grid.propagate(i)
+            if i != None:
+                grid.tiles[i].collapse()
+                grid.propagate(i)
             grid.n_collapsed += 1
-            step = False
+            #step = False
         grid.draw(SCREEN)
 
         clock.tick(60)
